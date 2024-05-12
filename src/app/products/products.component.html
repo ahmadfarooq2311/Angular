@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+           Contact us Form
+        </div>
+        <form (ngSubmit)="onFormSubmit()" [formGroup]="productsForm">
+           <div class="form-row">
+              <div class="input-data">
+                 <input type="text" formControlName="name" required>
+                 <div class="underline"></div>
+                 <label for="">Product Name</label>
+              </div>
+              <div class="input-data">
+                 <input type="text" formControlName="quantity" required>
+                 <div class="underline"></div>
+                 <label for="">Quantity</label>
+              </div>
+           </div>
+           <div class="form-row">
+           <div class="input-data textarea">
+              <textarea rows="8" cols="80" formControlName="description" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Description</label>
+              <br />
+              <div class="form-row submit-btn">
+                 <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="submit">
+                 </div>
+              </div>
+           </div>
+           </div>
+        </form>
+        </div>
+</body>
+</html>
